@@ -19,7 +19,3 @@ spec:
   install:
     remediation:
       retries: 3
-  Values:
-    global:
-      image:
-        version: 8.0.20-1

@@ -9,3 +9,8 @@ spec:
       version: ">=8.0.20"
   test:
     enable: false
+
+  values:
+    global:
+      image:
+        version: 8.0.20-1
