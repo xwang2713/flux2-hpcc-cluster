@@ -10,7 +10,7 @@ spec:
       chart: ./helm/hpcc
       sourceRef:
         kind: GitRepository
-        name: helm-chart
+        name: hpcc-chart
         namespace: flux-system
       valuesFiles:
         - values.yaml

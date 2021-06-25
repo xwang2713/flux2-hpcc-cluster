@@ -8,7 +8,7 @@ spec:
     spec:
       version: ">=8.0.20"
   test:
-    enable: false
+    enable: test
 
   values:
     global:
