@@ -1,0 +1,25 @@
+piVersion: helm.toolkit.fluxcd.io/v2beta1
+kind: HelmRelease
+metadata:
+  name: hpcc
+  namespace: hpcc-systems
+spec:
+  releaseName: hpcc
+  chart:
+    spec:
+      chart: ./helm/hpcc
+      sourceRef:
+        kind: GitRepository
+        name: helm-chart
+        namespace: flux-system
+      valuesFiles:
+        - values.yaml
+        - ../examples/local/values-localfile.yaml
+  interval: 5m
+  install:
+    remediation:
+      retries: 3
+  Values:
+    global:
+      image:
+        version: 8.0.20-1
