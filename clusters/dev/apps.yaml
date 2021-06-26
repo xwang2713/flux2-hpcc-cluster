@@ -13,3 +13,12 @@ spec:
   path: ./apps/dev
   prune: true
   validation: client
+  healthChecks:
+    - apiVersion: helm.toolkit.fluxcd.io/v1beta1
+      kind: HelmRelease
+      name: hpcc
+      namespace: hpcc-systems
+    - apiVersion: helm.toolkit.fluxcd.io/v1beta1
+      kind: HelmRelease
+      name: localfile
+      namespace: hpcc-systems
