@@ -7,13 +7,13 @@ spec:
   releaseName: localfile
   chart:
     spec:
-      chart: ./helm/examples/local/localfile
+      chart: helm/examples/local/localfile
       sourceRef:
         kind: GitRepository
         name: hpcc-chart
         namespace: flux-system
       valuesFiles:
-        - values.yaml
+        - helm/examples/local/values.yaml
   interval: 5m
   install:
     remediation:
