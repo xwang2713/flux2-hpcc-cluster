@@ -9,7 +9,7 @@ spec:
     spec:
       chart: kibana
       sourceRef:
-        kind: GitRepository
+        kind: HelmRepository
         name: elastic
         namespace: flux-system
   interval: 5m
