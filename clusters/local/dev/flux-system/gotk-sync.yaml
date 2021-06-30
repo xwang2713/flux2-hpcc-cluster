@@ -7,7 +7,7 @@ metadata:
 spec:
   interval: 1m0s
   ref:
-    branch: master
+    branch: localfile2
   secretRef:
     name: flux-system
   url: https://github.com/xwang2713/flux2-hpcc-cluster.git
@@ -19,7 +19,7 @@ metadata:
   namespace: flux-system
 spec:
   interval: 10m0s
-  path: ./clusters/dev
+  path: ./clusters/local/dev
   prune: true
   sourceRef:
     kind: GitRepository
