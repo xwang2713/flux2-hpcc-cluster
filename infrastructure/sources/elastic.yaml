@@ -3,6 +3,6 @@ kind: HelmRepository
 metadata:
   name: elastic
 spec:
-  interval: 45m
+  interval: 10m
   url: https://helm.elastic.co
 
