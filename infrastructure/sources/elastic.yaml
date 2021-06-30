@@ -1,0 +1,8 @@
+apiVersion: source.toolkit.fluxcd.io/v1beta1
+kind: GitRepository
+metadata:
+  name: elastic
+spec:
+  interval: 5m
+  url: https://helm.elastic.co
+
