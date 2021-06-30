@@ -1,0 +1,59 @@
+apiVersion: helm.toolkit.fluxcd.io/v2beta1
+kind: HelmRelease
+metadata:
+  name: hpcc-azurefile 
+  namespace: hpcc-systems
+spec:
+  releaseName: hpcc-azurefile
+  chart:
+    spec:
+      chart: helm/examples/azure/hpcc-azurefile
+      sourceRef:
+        kind: GitRepository
+        name: hpcc-chart
+        namespace: flux-system
+      valuesFiles:
+        - helm/examples/azure/hpcc-azurefile/values.yaml
+  interval: 5m
+  install:
+    remediation:
+      retries: 3
+  values:
+    common:
+      secretName: "azure-secret2"
+      secretNamespace: "hpcc-systems"
+    planes:
+      - name: dali
+        subPath: dalistorage
+        size: 1Gi
+        category: dali
+        #sku: "Standard_LRS"
+        shareName: dalishare2
+      - name: dll
+        subPath: queries # cannot currently be changed
+        size: 1Gi
+        category: dll
+        rwmany: true
+        #sku: "Standard_LRS"
+        shareName: dllsshare2
+      - name: sasha
+        subPath: sasha
+        size: 1Gi
+        rwmany: true
+        category: sasha
+        #sku: "Standard_LRS"
+        shareName: sashashare2
+      - name: data
+        subPath: hpcc-data # cannot currently be changed
+        size: 3Gi
+        category: data
+        rwmany: true
+        #sku: "Standard_LRS"
+        shareName: datashare2
+      - name: mydropzone
+        subPath: dropzone
+        size: 1Gi
+        rwmany: true
+        category: lz
+        #sku: "Standard_LRS"
+        shareName: lzshare2
