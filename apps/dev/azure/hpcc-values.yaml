@@ -1,0 +1,16 @@
+apiVersion: helm.toolkit.fluxcd.io/v2beta1
+kind: HelmRelease
+metadata:
+  name: hpcc
+  namespace: hpcc-systems
+spec:
+  chart:
+    spec:
+      version: ">=8.2.0"
+  test:
+    enable: true
+
+  values:
+    global:
+      image:
+        version: 8.2.0-1
