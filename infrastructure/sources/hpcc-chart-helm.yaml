@@ -1,0 +1,7 @@
+apiVersion: source.toolkit.fluxcd.io/v1beta1
+kind: HelmRepository
+metadata:
+  name: hpcc-chart-helm
+spec:
+  interval: 5m
+  url: https://hpcc-systems.github.io/helm-chart

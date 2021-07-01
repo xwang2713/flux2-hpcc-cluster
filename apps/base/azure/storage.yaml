@@ -10,7 +10,7 @@ spec:
       chart: helm/examples/azure/hpcc-azurefile
       sourceRef:
         kind: GitRepository
-        name: hpcc-chart
+        name: hpcc-chart-git
         namespace: flux-system
       valuesFiles:
         - helm/examples/azure/hpcc-azurefile/values.yaml
