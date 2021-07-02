@@ -6,11 +6,11 @@ metadata:
 spec:
   chart:
     spec:
-      version: ">=8.2.0"
+      version: ">=8.0.22"
   test:
     enable: true
 
   values:
     global:
       image:
-        version: 8.2.0-1
+        version: 8.0.22-1
