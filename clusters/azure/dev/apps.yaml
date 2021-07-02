@@ -16,7 +16,7 @@ spec:
   healthChecks:
     - apiVersion: helm.toolkit.fluxcd.io/v1beta1
       kind: HelmRelease
-      name: localfile
+      name: azstorage
       namespace: hpcc-systems
     - apiVersion: helm.toolkit.fluxcd.io/v1beta1
       kind: HelmRelease
