@@ -7,10 +7,13 @@ spec:
   chart:
     spec:
       version: ">=8.2.0"
+      valuesFiles:
+      - helm/hpcc/values.yaml
+      - helm/examples/local/values-localfile.yaml
   test:
     enable: true
 
   values:
     global:
       image:
-        version: 8.2.0-1
+        version: 8.2.0-2

@@ -3,4 +3,3 @@ kind: Kustomization
 namespace: flux-system
 resources:
   - hpcc-chart-git.yaml
-  - hpcc-chart-helm.yaml
