@@ -8,8 +8,8 @@ spec:
     spec:
       version: ">=8.2.0"
       valuesFiles:
-      - helm/hpcc/values.yaml
-      - helm/examples/azure/values-retained-azurefile.yaml
+        - helm/hpcc/values.yaml
+        - helm/examples/azure/values-retained-azurefile.yaml
   test:
     enable: true
 
