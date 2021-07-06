@@ -8,4 +8,5 @@ resources:
 patchesStrategicMerge:
   - storage-values.yaml
   - hpcc-values.yaml
+patches:
   - esp-services.yaml
