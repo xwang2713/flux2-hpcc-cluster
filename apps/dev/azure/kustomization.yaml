@@ -9,8 +9,6 @@ patchesStrategicMerge:
   - hpcc-values.yaml
 patches:
   - target:
-      group: apps
-      version: v1
       kind: Service
       name: eclwatch
     path: esp-services.yaml
