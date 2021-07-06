@@ -1,6 +1,5 @@
 apiVersion: kustomize.config.k8s.io/v1beta1
 kind: Kustomization
-namespace: hpcc-systems
 resources:
   - ../../base/azure/storage.yaml
   - ../../base/hpcc
@@ -9,4 +8,4 @@ patchesStrategicMerge:
   - storage-values.yaml
   - hpcc-values.yaml
 patches:
-  - esp-services.yaml
+  - path: esp-services.yaml
