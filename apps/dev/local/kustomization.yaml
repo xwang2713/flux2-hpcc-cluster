@@ -6,3 +6,8 @@ resources:
   - ../../base/elastic
 patchesStrategicMerge:
   - hpcc-values.yaml
+patches:
+  - path: esp-services.yaml
+    target:
+      kind: Service
+      name: eclwatch
