@@ -4,3 +4,5 @@ metadata:
   name: "eclwatch"
   annotations:
     service.beta.kubernetes.io/azure-load-balancer-internal: "false"
+  labels:
+    gitops: "flux2"

@@ -8,8 +8,8 @@ patchesStrategicMerge:
   - storage-values.yaml
   - hpcc-values.yaml
 patches:
-  - target:
+  - path: esp-services.yaml
+    target:
       kind: Service
       name: eclwatch
       namespace: hpcc-systems
-    path: esp-services.yaml
