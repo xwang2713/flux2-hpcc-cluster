@@ -12,7 +12,7 @@ spec:
         kind: GitRepository
         name: hpcc-chart-git
         namespace: flux-system
-      version: "1.6.0"
+      version: "8.2.0"
       valuesFiles:
         - helm/examples/local/hpcc-localfile/values.yaml
   interval: 5m
