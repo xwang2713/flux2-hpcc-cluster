@@ -2,6 +2,7 @@ apiVersion: helm.toolkit.fluxcd.io/v2beta1
 kind: HelmRelease
 metadata:
   name: hpcc
+  namespace: hpcc-systems
 spec:
   releaseName: hpcc
   chart:
@@ -11,7 +12,7 @@ spec:
         kind: GitRepository
         name: hpcc-chart-git
         namespace: flux-system
-  interval: 5m
+  interval: 1m
   install:
     remediation:
       retries: 3
