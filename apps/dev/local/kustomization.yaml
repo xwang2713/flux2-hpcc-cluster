@@ -5,5 +5,5 @@ resources:
   - ../../base/local
   - ../../base/elastic
 patches:
-  - hpcc-values.yaml
-  - esp-services.yaml
+  - path: hpcc-values.yaml
+  - path: esp-services.yaml
