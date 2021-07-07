@@ -5,7 +5,7 @@ metadata:
 spec:
   chart:
     spec:
-      version: ">=8.2.0"
+      version: "8.2.x"
       valuesFiles:
         - helm/hpcc/values.yaml
         - helm/examples/local/values-localfile.yaml

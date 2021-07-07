@@ -4,5 +4,6 @@ resources:
   - ../../base/hpcc
   - ../../base/local
   - ../../base/elastic
-patchesStrategicMerge:
+patches:
   - hpcc-values.yaml
+  - esp-services.yaml

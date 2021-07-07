@@ -5,6 +5,6 @@ metadata:
 spec:
   interval: 5m
   url: https://github.com/hpcc-systems/helm-chart
-# ref:
-#   branch: 8.2.0
+  ref:
+    tag: 8.2.0
 
