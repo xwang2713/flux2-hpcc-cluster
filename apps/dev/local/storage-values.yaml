@@ -1,0 +1,14 @@
+apiVersion: helm.toolkit.fluxcd.io/v2beta1
+kind: HelmRelease
+metadata:
+  name: hpcc-localfile
+spec:
+  chart:
+    spec:
+      valuesFiles:
+        - helm/examples/local/hpcc-localfile/values.yaml
+  test:
+    enable: true
+  values:
+    common:
+      hostpath: "/c/hpcc-data"
