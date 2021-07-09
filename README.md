@@ -1,4 +1,4 @@
-#
+# GitOps/flux for HPCC Systems Cloud Deployment
 
 ## Introduction
 - https://github.com/fluxcd/flux2
@@ -8,6 +8,21 @@
 - https://github.com/fluxcd/flux2-kustomize-helm-example
 
 ## Steps
-```code
+### github 
+- Create a github account
+- Create a token
+- Create github a repo for HPCC cluster deployment or fork this one
+- fill bin/env
+
+### Prepare HPCC cluster deployment
+Follow the Example or this repo to HPCC cluster settings <br/>
+The general structure
+
+```tree
+apps/
+
+infrastures/
+
+clusters/
 
 ```
