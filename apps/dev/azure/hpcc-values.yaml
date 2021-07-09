@@ -7,9 +7,9 @@ spec:
   chart:
     spec:
       version: "8.2.x"
-      valuesFiles:
-        - helm/hpcc/values.yaml
-        - helm/examples/azure/values-retained-azurefile.yaml
+      #      valuesFiles:
+      #  - helm/hpcc/values.yaml
+      #  - helm/examples/azure/values-retained-azurefile.yaml
   test:
     enable: true
 
@@ -19,10 +19,10 @@ spec:
         version: 8.2.0-2
     esp:
       - name: eclwatch
-        application: eclwatch
-        auth: none
-        replicas: 1
+        #  application: eclwatch
+        #auth: none
+        #replicas: 1
         service:
-          port: 8888
-          servicePort: 8010
+                #  port: 8888
+                #servicePort: 8010
           visibility: global

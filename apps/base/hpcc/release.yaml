@@ -11,6 +11,9 @@ spec:
         kind: GitRepository
         name: hpcc-chart-git
         namespace: flux-system
+      valuesFiles:
+        - helm/hpcc/values.yaml
+        - helm/examples/azure/values-retained-azurefile.yaml
   interval: 1m
   install:
     remediation:
