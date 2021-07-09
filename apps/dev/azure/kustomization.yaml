@@ -1,15 +1,9 @@
 apiVersion: kustomize.config.k8s.io/v1beta1
 kind: Kustomization
+namespace: hpcc-systems
 resources:
   - ../../base/azure
   - ../../base/hpcc
   - ../../base/elastic
 patchesStrategicMerge:
-  - storage-values.yaml
   - hpcc-values.yaml
-patches:
-  - path: esp-services.yaml
-    target:
-      kind: Service
-      name: eclwatch
-      namespace: hpcc-systems

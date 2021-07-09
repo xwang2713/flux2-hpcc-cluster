@@ -5,7 +5,7 @@ metadata:
 spec:
   chart:
     spec:
-      version: ">=8.2.0"
+      version: "8.2.x"
       valuesFiles:
         - helm/hpcc/values.yaml
         - helm/examples/azure/values-retained-azurefile.yaml
@@ -16,3 +16,7 @@ spec:
     global:
       image:
         version: 8.2.0-2
+    esp:
+      - name: eclwatch
+        service:
+          visibility: global
