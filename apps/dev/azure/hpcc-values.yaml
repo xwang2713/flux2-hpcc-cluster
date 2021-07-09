@@ -17,3 +17,7 @@ spec:
     global:
       image:
         version: 8.2.0-2
+    esp:
+      - name: eclwatch
+        service:
+          visibility: global
