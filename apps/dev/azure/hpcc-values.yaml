@@ -28,6 +28,6 @@ spec:
     #     servicePort: 8010
     #     visibility: global
   postRenderers:
-    - kustomiz:
+    - kustomize:
         patchesStrategicMerge:
           - esp-service.yaml
