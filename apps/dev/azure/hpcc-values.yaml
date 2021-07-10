@@ -30,7 +30,8 @@ spec:
   postRenderers:
     - kustomize:
         patchesStrategicMerge:
-          - {
+          - |-
+            {
               "apiVersion": "v1",
               "kind": "Service",
               "metadata": {
