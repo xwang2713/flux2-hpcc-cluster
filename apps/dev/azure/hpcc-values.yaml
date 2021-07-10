@@ -30,4 +30,10 @@ spec:
   postRenderers:
     - kustomize:
         patchesStrategicMerge:
-          - esp-service.yaml
+          - patch: |-
+              apiVersion: v1
+              kind: Service
+              metadata:
+                name: "eclwatch"
+                annotations:
+                  service.beta.kubernetes.io/azure-load-balancer-internal: "false"
