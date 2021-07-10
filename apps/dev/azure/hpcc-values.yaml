@@ -8,6 +8,8 @@ spec:
     spec:
       version: "8.2.x"
       valuesFiles:
+    #
+    #stRenderer specification.
         - helm/hpcc/values.yaml
         - helm/examples/azure/values-retained-azurefile.yaml
   test:
@@ -16,5 +18,15 @@ spec:
     global:
       image:
         version: 8.2.0-2
+    #esp:
+    #  name: eclwatch
+    #  application: eclwatch 
+    #   auth: none
+    #   replicas: 1
+    #   service:
+    #     port: 8888     
+    #     servicePort: 8010
+    #     visibility: global
   postRenderers:
-    - ../../../post-renderer/001/kustomize
+    - patchStragtegicMerge:
+      - esp-service.yaml
