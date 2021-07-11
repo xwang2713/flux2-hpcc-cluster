@@ -1,16 +1,15 @@
 apiVersion: helm.toolkit.fluxcd.io/v2beta1
 kind: HelmRelease
 metadata:
-  name: hpcc-azurefile 
-  namespace: hpcc-systems
+  name: azstorage
 spec:
-  releaseName: hpcc-azurefile
+  releaseName: azstorage
   chart:
     spec:
       chart: helm/examples/azure/hpcc-azurefile
       sourceRef:
         kind: GitRepository
-        name: hpcc-chart
+        name: hpcc-chart-git
         namespace: flux-system
       valuesFiles:
         - helm/examples/azure/hpcc-azurefile/values.yaml

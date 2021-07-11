@@ -1,0 +1,27 @@
+apiVersion: helm.toolkit.fluxcd.io/v2beta1
+kind: HelmRelease
+metadata:
+  name: hpcc
+  namespace: hpcc-systems
+spec:
+  chart:
+    spec:
+      version: "8.2.x"
+      valuesFiles:
+        - helm/hpcc/values.yaml
+        - helm/examples/azure/values-retained-azurefile.yaml
+  test:
+    enable: true
+  values:
+    global:
+      image:
+        version: 8.2.0-2
+  postRenderers:
+    - kustomize:
+        patchesStrategicMerge:
+          - apiVersion: v1
+            kind: Service
+            metadata: 
+              name: "eclwatch"
+              annotations:
+                service.beta.kubernetes.io/azure-load-balancer-internal: "false"

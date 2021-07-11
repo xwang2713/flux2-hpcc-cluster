@@ -10,14 +10,15 @@ spec:
   sourceRef:
     kind: GitRepository
     name: flux-system
-  path: ./apps/dev/local
+  #path: ./apps/dev/local
+  path: ./apps/dev/local-simple
   prune: true
   validation: client
   healthChecks:
-    - apiVersion: helm.toolkit.fluxcd.io/v1beta1
-      kind: HelmRelease
-      name: localfile
-      namespace: hpcc-systems
+  #  - apiVersion: helm.toolkit.fluxcd.io/v1beta1
+  #    kind: HelmRelease
+  #    name: hpcc-localfile
+  #    namespace: hpcc-systems
     - apiVersion: helm.toolkit.fluxcd.io/v1beta1
       kind: HelmRelease
       name: hpcc

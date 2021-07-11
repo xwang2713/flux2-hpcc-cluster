@@ -1,23 +1,17 @@
 apiVersion: helm.toolkit.fluxcd.io/v2beta1
 kind: HelmRelease
 metadata:
-  name: localfile 
-  namespace: hpcc-systems
+  name: hpcc-localfile 
 spec:
-  releaseName: localfile
+  releaseName: hpcc-localfile
   chart:
     spec:
       chart: helm/examples/local/hpcc-localfile
       sourceRef:
         kind: GitRepository
-        name: hpcc-chart
+        name: hpcc-chart-git
         namespace: flux-system
-      valuesFiles:
-        - helm/examples/local/hpcc-localfile/values.yaml
   interval: 5m
   install:
     remediation:
       retries: 3
-  values:
-    common:
-      hostpath: "/c/hpcc-data"
