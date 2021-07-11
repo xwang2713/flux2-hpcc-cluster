@@ -1,0 +1,10 @@
+apiVersion: helm.toolkit.fluxcd.io/v2beta1
+kind: HelmRelease
+metadata:
+  name: azstorage 
+spec:
+  chart:
+    spec:
+      version: ">=8.2.0"
+  test:
+    enable: true
