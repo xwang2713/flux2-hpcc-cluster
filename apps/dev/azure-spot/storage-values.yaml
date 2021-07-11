@@ -3,8 +3,5 @@ kind: HelmRelease
 metadata:
   name: azstorage 
 spec:
-  chart:
-    spec:
-      version: ">=8.2.0"
   test:
     enable: true
