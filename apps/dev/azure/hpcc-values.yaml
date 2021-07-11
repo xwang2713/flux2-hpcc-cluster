@@ -16,10 +16,10 @@ spec:
     global:
       image:
         version: 8.2.0-2
-    visibilities: 
-      local:
-        annotations:
-          service.beta.kubernetes.io/azure-load-balancer-internal: "false"
+      visibilities: 
+        local:
+          annotations:
+            service.beta.kubernetes.io/azure-load-balancer-internal: "false"
   #postRenderers:
   #  - kustomize:
   #      patchesStrategicMerge:
