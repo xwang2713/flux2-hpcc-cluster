@@ -16,12 +16,16 @@ spec:
     global:
       image:
         version: 8.2.0-2
-  postRenderers:
-    - kustomize:
-        patchesStrategicMerge:
-          - apiVersion: v1
-            kind: Service
-            metadata: 
-              name: "eclwatch"
-              annotations:
-                service.beta.kubernetes.io/azure-load-balancer-internal: "false"
+      visibilities: 
+        local:
+          annotations:
+            service.beta.kubernetes.io/azure-load-balancer-internal: "false"
+  #postRenderers:
+  #  - kustomize:
+  #      patchesStrategicMerge:
+  #        - apiVersion: v1
+  #          kind: Service
+  #          metadata: 
+  #            name: "eclwatch"
+  #            annotations:
+  #              service.beta.kubernetes.io/azure-load-balancer-internal: "false"
