@@ -11,7 +11,7 @@ spec:
     kind: GitRepository
     name: flux-system
   #path: ./apps/dev/azure
-  path: ./apps/dev/azure
+  path: ./apps/dev/azure-spot
   prune: true
   validation: client
   healthChecks:

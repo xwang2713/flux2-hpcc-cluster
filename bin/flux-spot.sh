@@ -10,7 +10,7 @@ flux bootstrap github \
   --personal \
   --token-auth \
   --path=clusters/dev/azure \
-  --toleration-keys=kubernetes.azure.com/scalesetpriority
+  --toleration-keys="kubernetes.azure.com/scalesetpriority CriticalAddonsOnly"
 
 #  --context=docker-desktop \
 # watch flux get kustomizations
