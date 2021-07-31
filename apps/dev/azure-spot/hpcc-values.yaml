@@ -19,11 +19,11 @@ spec:
     placements:
       - pods: ["all"]
         placement:
-        tolerations:
-          - key: "kubernetes.azure.com/scalesetpriority"
-            operator: "Equal"
-            value: "spot"
-            effect: "NoSchedule"
+          tolerations:
+            - key: "kubernetes.azure.com/scalesetpriority"
+              operator: "Equal"
+              value: "spot"
+              effect: "NoSchedule"
   postRenderers:
     - kustomize:
        patchesStrategicMerge:
