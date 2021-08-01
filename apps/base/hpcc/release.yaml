@@ -11,7 +11,7 @@ spec:
         kind: GitRepository
         name: hpcc-chart-git
         namespace: flux-system
-  interval: 1m
+  interval: 2m
   install:
     remediation:
       retries: 3
