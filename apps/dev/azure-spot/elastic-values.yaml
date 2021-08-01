@@ -19,7 +19,7 @@ spec:
       replicas: 1
       minimumMasterNodes: 1
       labels: {"managedby" : "HPCC"}
-      clusterHealthCheckParams: "wait_for_status=green&timeout=1s"
+      clusterHealthCheckParams: "wait_for_status=[yellow,green]&timeout=1s"
       volumeClaimTemplate:
         accessModes: [ "ReadWriteOnce" ]
         resources:
