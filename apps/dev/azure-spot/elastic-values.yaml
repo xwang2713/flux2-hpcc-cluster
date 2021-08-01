@@ -5,7 +5,7 @@ metadata:
   namespace: hpcc-systems
 spec:
   test:
-    enabled: true
+    enable: true
   values:
     elasticsearch:
       tolerations:
