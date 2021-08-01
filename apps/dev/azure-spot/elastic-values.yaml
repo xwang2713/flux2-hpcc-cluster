@@ -4,6 +4,8 @@ metadata:
   name: elk
   namespace: hpcc-systems
 spec:
+  test:
+    enabled: true
   values:
     elasticsearch:
       tolerations:
