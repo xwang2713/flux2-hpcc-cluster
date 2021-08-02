@@ -13,13 +13,13 @@ spec:
           operator: "Equal"
           value:  "spot"
           effect: "NoSchedule"
-      enabled: true
+      #enabled: true
       description: "HPCC Managed Elasticsearch"
-      antiAffinity: "soft"
-      replicas: 1
-      minimumMasterNodes: 1
+      #antiAffinity: "soft"
+      #replicas: 1
+      #minimumMasterNodes: 1
       labels: {"managedby" : "HPCC"}
-      clusterHealthCheckParams: "local=true"
+      #clusterHealthCheckParams: "local=true"
       #clusterHealthCheckParams: "wait_for_status=green&timeout=100s"
       #readinessProbe:
       #  failureThreshold: 3
