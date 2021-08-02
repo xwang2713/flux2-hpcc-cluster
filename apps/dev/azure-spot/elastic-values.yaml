@@ -8,12 +8,12 @@ spec:
   #  enable: true
   values:
     elasticsearch:
+      enabled: true
       tolerations:
         - key: "kubernetes.azure.com/scalesetpriority"
           operator: "Equal"
           value:  "spot"
           effect: "NoSchedule"
-      enabled: true
       description: "HPCC Managed Elasticsearch"
       antiAffinity: "soft"
       replicas: 1
@@ -32,6 +32,9 @@ spec:
         resources:
           requests:
             storage: 5Gi
+      networkPolicy:
+        http:
+          enabled: true
     filebeat:
       tolerations:
         - key: "kubernetes.azure.com/scalesetpriority"

@@ -1,0 +1,51 @@
+piVersion: networking.k8s.io/v1
+kind: NetworkPolicy
+metadata:
+  name: eclwatch-ingress
+spec:
+   podSelector:
+     matchLabels:
+       app: eclwatch
+   policyTypes:
+   - Ingress
+   ingress:
+   - {}
+---
+piVersion: networking.k8s.io/v1
+kind: NetworkPolicy
+metadata:
+  name: espservices-ingress
+spec:
+   podSelector:
+     matchLabels:
+       app: espservices
+   policyTypes:
+   - Ingress
+   ingress:
+   - {}
+---
+piVersion: networking.k8s.io/v1
+kind: NetworkPolicy
+metadata:
+  name: eclqueries-ingress
+spec:
+   podSelector:
+     matchLabels:
+       app: eclqueries
+   policyTypes:
+   - Ingress
+   ingress:
+   - {}
+---
+piVersion: networking.k8s.io/v1
+kind: NetworkPolicy
+metadata:
+  name: esdl-sandbox-ingress
+spec:
+   podSelector:
+     matchLabels:
+       app: esdl-sandbox
+   policyTypes:
+   - Ingress
+   ingress:
+   - {}
