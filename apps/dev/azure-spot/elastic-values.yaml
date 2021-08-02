@@ -22,7 +22,6 @@ spec:
       clusterHealthCheckParams: "wait_for_status=green&timeout=100s"
       readinessProbe:
         failureThreshold: 3
-        initialDelaySeconds: 10
         initialDelaySeconds: 100
         periodSeconds: 10
         successThreshold: 3
