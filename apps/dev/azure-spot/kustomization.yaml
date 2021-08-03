@@ -4,9 +4,9 @@ resources:
   - ../../base/azure
   - ../../base/hpcc
   - ../../base/config
-#  - ../../base/elastic
+  - ../../base/elastic
 
 patchesStrategicMerge:
   - storage-values.yaml
   - hpcc-values.yaml
-    # - elastic-values.yaml
+  - elastic-values.yaml
