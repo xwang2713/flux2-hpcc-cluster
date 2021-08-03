@@ -13,6 +13,6 @@ spec:
      - podSelector:
          matchLabels:
            app: elk-filebeat
-
-
-     #     elk-kibana-cfb478cd5-lcjhg
+     - podSelector:
+         matchLabels:
+           app: kibana
