@@ -3,16 +3,30 @@ kind: NetworkPolicy
 metadata:
   name: elastic-ingress
 spec:
-   podSelector:
-     matchLabels:
-       app: elasticsearch-master
-   policyTypes:
-   - Ingress
-   ingress:
-   - from:
-     - podSelector:
-         matchLabels:
-           app: elk-filebeat
-     - podSelector:
-         matchLabels:
-           app: kibana
+  podSelector:
+    matchLabels:
+      app: elasticsearch-master
+  policyTypes:
+  - Ingress
+  ingress:
+  - from:
+    - podSelector:
+        matchLabels:
+          app: elk-filebeat
+    - podSelector:
+        matchLabels:
+          app: kibana
+---
+apiVersion: networking.k8s.io/v1
+kind: NetworkPolicy
+metadata:
+  name: kibana-ingress
+spec:
+  podSelector:
+    matchLabels:
+      app: eclwatch
+  policyTypes:
+  - Ingress
+  ingress:
+  - {}
+
