@@ -21,12 +21,12 @@ spec:
       labels: {"managedby" : "HPCC"}
       clusterHealthCheckParams: "local=true"
       #clusterHealthCheckParams: "wait_for_status=green&timeout=100s"
-      #readinessProbe:
-      #  failureThreshold: 3
-      #  initialDelaySeconds: 100
-      #  periodSeconds: 10
-      #  successThreshold: 1
-      #  timeoutSeconds: 5
+      readinessProbe:
+        failureThreshold: 3
+        initialDelaySeconds: 100
+        periodSeconds: 10
+        successThreshold: 1
+        timeoutSeconds: 5
       volumeClaimTemplate:
         accessModes: [ "ReadWriteOnce" ]
         resources:
@@ -36,6 +36,12 @@ spec:
         http:
           enabled: true
     filebeat:
+      readinessProbe:
+        failureThreshold: 3
+        initialDelaySeconds: 100
+        periodSeconds: 10
+        successThreshold: 1
+        timeoutSeconds: 5
       tolerations:
         - key: "kubernetes.azure.com/scalesetpriority"
           operator: "Equal"
@@ -80,6 +86,12 @@ spec:
             hosts: '${ELASTICSEARCH_HOSTS:elasticsearch-master:9200}'
             pipeline: 'hpccpipeline'
     kibana:
+      readinessProbe:
+        failureThreshold: 3
+        initialDelaySeconds: 100
+        periodSeconds: 10
+        successThreshold: 1
+        timeoutSeconds: 5
       tolerations:
         - key: "kubernetes.azure.com/scalesetpriority"
           operator: "Equal"
