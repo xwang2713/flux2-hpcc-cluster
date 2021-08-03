@@ -3,3 +3,4 @@ kind: Kustomization
 namespace: hpcc-systems
 resources:
   - network-policy-esp-services.yaml
+  - network-policy-elk.yaml
