@@ -9,4 +9,4 @@ resources:
 patchesStrategicMerge:
   - storage-values.yaml
   - hpcc-values.yaml
-  - elastic-values.yaml
+  - ../../base/elastic/elastic-values.yaml

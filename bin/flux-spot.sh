@@ -3,15 +3,21 @@
 WK_DIR=$(dirname $0)
 source ${WK_DIR}/env
 
+# flux azure : https://fluxcd.io/docs/use-cases/azure/
+
 flux bootstrap github \
   --owner=${GITHUB_USER} \
   --repository=${GITHUB_REPO} \
-  --branch=azure \
+  --branch=azure-spot \
   --personal \
   --token-auth \
   --path=clusters/dev/azure \
-  --toleration-keys="kubernetes.azure.com/scalesetpriority CriticalAddonsOnly"
+  --network-policy=true \
+  --toleration-keys="HPCCCriticalOnly"
 
+#  --toleration-keys="kubernetes.azure.com/scalesetpriority"
+# --context=aks-flux2-wangxi01-canadacentral-admin \
+# --toleration-keys="kubernetes.azure.com/scalesetpriority,HPCCCriticalOnly"
 #  --context=docker-desktop \
 # watch flux get kustomizations
 
