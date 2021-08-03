@@ -3,6 +3,7 @@ kind: Kustomization
 resources:
   - ../../base/azure
   - ../../base/hpcc
+  - ../../base/config
 #  - ../../base/elastic
 
 patchesStrategicMerge:
