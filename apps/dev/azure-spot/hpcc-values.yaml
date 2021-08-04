@@ -24,6 +24,24 @@ spec:
               operator: "Equal"
               value: "spot"
               effect: "NoSchedule"
+      - pods: ["type:dali","type:sasha"]
+        placement:
+          nodeSelector:
+            hpcc: critical
+          tolerations:
+            - key: "HPCCCriticalOnly"
+              operator: "Equal"
+              value: "true"
+              effect: "NoSchedule"
+      - pods: ["type:thor"]
+        placement:
+          nodeSelector:
+            hpcc: thor
+          tolerations:
+            - key: "HPCCThorOnly"
+              operator: "Equal"
+              value: "true"
+              effect: "NoSchedule"
   postRenderers:
     - kustomize:
         patchesStrategicMerge:
