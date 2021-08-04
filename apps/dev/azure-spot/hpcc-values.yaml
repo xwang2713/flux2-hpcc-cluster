@@ -24,20 +24,6 @@ spec:
               operator: "Equal"
               value: "spot"
               effect: "NoSchedule"
-      - pods: ["type:dali","type:sasha"]
-        placement:
-          tolerations:
-            - key: "HPCCCriticalOnly"
-              operator: "Equal"
-              value: "true"
-              effect: "NoSchedule"
-      - pods: ["type:thor"]
-        placement:
-          tolerations:
-            - key: "HPCCThorOnly"
-              operator: "Equal"
-              value: "true"
-              effect: "NoSchedule"
   postRenderers:
     - kustomize:
         patchesStrategicMerge:
