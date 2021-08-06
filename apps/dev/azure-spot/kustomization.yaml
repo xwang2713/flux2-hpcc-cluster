@@ -6,8 +6,8 @@ resources:
   - ../../base/hpcc/network-policy-esp-services.yaml
   - ../../base/elastic
   - ../../base/elastic/network-policy-elk.yaml
-  - ../../base/ingress/nginex
-  - ../../base/ingress/nginex/ingress-subpath.yaml
+  - ../../base/ingress/nginx
+  - ../../base/ingress/nginx/ingress-subpath.yaml
 
 patchesStrategicMerge:
   - storage-values.yaml
