@@ -3,7 +3,7 @@ kind: Kustomization
 namespace: hpcc-systems
 resources:
   - ../../base/hpcc
-  - ../../base/local
+  - ../../base/storage/local
   - ../../base/elastic
 patches:
   - path: storage-values.yaml
