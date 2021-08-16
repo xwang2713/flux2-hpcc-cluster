@@ -3,10 +3,13 @@ kind: Kustomization
 resources:
   - ../../base/storage/azure
   - ../../base/hpcc
+  - ../../base/hpcc/network-policy-esp-services.yaml
   - ../../base/elastic
+  - ../../base/elastic/network-policy-elk.yaml
+  - ../../base/ingress/nginx
+  - ../../base/ingress/nginx/ingress-subpath.yaml
+
 
 patchesStrategicMerge:
   - storage-values.yaml
   - hpcc-values.yaml
-  - elastic-values.yaml
-

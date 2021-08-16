@@ -6,5 +6,5 @@ spec:
   interval: 5m
   url: https://github.com/hpcc-systems/helm-chart
   ref:
-    tag: 8.2.6
+    tag: 8.2.10
 

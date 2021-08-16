@@ -24,14 +24,30 @@ spec:
       minimumMasterNodes: 1
       labels: {"managedby" : "HPCC"}
       clusterHealthCheckParams: "local=true"
+      #clusterHealthCheckParams: "wait_for_status=green&timeout=100s"
+      readinessProbe:
+        failureThreshold: 3
+        initialDelaySeconds: 30
+        periodSeconds: 10
+        successThreshold: 1
+        timeoutSeconds: 5
       volumeClaimTemplate:
         accessModes: [ "ReadWriteOnce" ]
         resources:
           requests:
             storage: 5Gi
+      networkPolicy:
+        http:
+          enabled: true
     filebeat:
       description: "HPCC Managed filebeat"
       labels: {"managedby" : "HPCC"}
+      readinessProbe:
+        failureThreshold: 3
+        initialDelaySeconds: 100
+        periodSeconds: 10
+        successThreshold: 1
+        timeoutSeconds: 5
       filebeatConfig:
         filebeat.yml: |
           filebeat.inputs:
@@ -66,3 +82,9 @@ spec:
       labels: {"managedby" : "HPCC"}
       service:
         type: "LoadBalancer"
+      readinessProbe:
+        failureThreshold: 3
+        initialDelaySeconds: 100
+        periodSeconds: 10
+        successThreshold: 1
+        timeoutSeconds: 5 
