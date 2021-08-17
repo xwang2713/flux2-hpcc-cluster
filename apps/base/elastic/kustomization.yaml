@@ -3,3 +3,4 @@ kind: Kustomization
 namespace: hpcc-systems
 resources:
   - elastic.yaml
+  - network-policy-elk.yaml
