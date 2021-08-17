@@ -82,6 +82,8 @@ spec:
       labels: {"managedby" : "HPCC"}
       service:
         type: "LoadBalancer"
+        annotations:
+          service.beta.kubernetes.io/azure-load-balancer-internal: "false"
       readinessProbe:
         failureThreshold: 3
         initialDelaySeconds: 100
