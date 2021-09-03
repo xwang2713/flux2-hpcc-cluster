@@ -8,13 +8,14 @@ source ${WK_DIR}/env
 flux bootstrap github \
   --owner=${GITHUB_USER} \
   --repository=${GITHUB_REPO} \
-  --branch=azure-spot \
+  --branch=nginx-ingress \
   --personal \
   --token-auth \
   --path=clusters/dev/azure \
   --network-policy=true \
-  --toleration-keys="HPCCCriticalOnly"
+  --toleration-keys="kubernetes.azure.com/scalesetpriority"
 
+#  --toleration-keys="HPCCCriticalOnly"
 #  --toleration-keys="kubernetes.azure.com/scalesetpriority"
 # --context=aks-flux2-wangxi01-canadacentral-admin \
 # --toleration-keys="kubernetes.azure.com/scalesetpriority,HPCCCriticalOnly"

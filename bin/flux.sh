@@ -4,14 +4,15 @@ WK_DIR=$(dirname $0)
 source ${WK_DIR}/env
 
 flux bootstrap github \
-  --context=docker-desktop \
   --owner=${GITHUB_USER} \
   --repository=${GITHUB_REPO} \
-  --branch=azure \
+  --branch=nginx-ingress \
   --personal \
   --token-auth \
-  --path=clusters/dev/zure
+  --network-policy=true \
+  --path=clusters/dev/azure
 
+#  --context=docker-desktop \
 # watch flux get kustomizations
 
 # delete and cleanup
