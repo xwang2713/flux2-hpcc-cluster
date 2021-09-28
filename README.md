@@ -59,8 +59,3 @@ To delete the cluster in bin directory run
 For Azure you also need delete PV with kubectl:
 ```code
 kubectl delete pv -all -n hpcc-systems
-```
-
-
-
-
