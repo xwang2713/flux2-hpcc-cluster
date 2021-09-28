@@ -4,4 +4,4 @@ namespace: hpcc-systems
 resources:
   - namespace.yaml
   - release.yaml
-#  - network-policy-esp-services.yaml
+  - network-policy-esp-services.yaml
